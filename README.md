@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# React-Firebase-material-UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use firebase auth to build a login page
+
+- react.js
+- firebase
+- material-ui
+
 
 ## Install
 
@@ -13,3 +18,8 @@ yarn install
 ```
 yarn start
 ```
+
+
+## License
+
+[MIT](./LICENSE)
