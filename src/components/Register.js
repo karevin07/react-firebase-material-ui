@@ -15,6 +15,7 @@ function Register() {
       .then((userCredential) => {
         // Register Successfully
         const user = userCredential.user;
+        console.log(user)
         // Perform post-registration actions, such as navigating to a user's profile page
         navigate('/register-success');
       })
@@ -23,6 +24,7 @@ function Register() {
         const errorCode = error.code;
         const errorMessage = error.message;
         // Error messages can be displayed here
+        console.log(errorCode, errorMessage)
       });
   }
 

@@ -1,24 +1,59 @@
 import logo from '../logo.svg';
 import '../App.css';
 
+import React from 'react';
+import { Typography, Paper } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
+import { IconButton } from '@mui/material';
+import LoginIcon from '@mui/icons-material/Login';
 
-function Index() {
+
+const RootContainer = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh',
+});
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(4),
+  textAlign: 'center',
+  color: theme.palette.text.primary,
+}));
+
+function Index({ isAuthenticated }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is a <code>React JS</code> project
-        </p>
-        <a
-          className="App-link"
-          href="https://react.dev"
-          target="_blank"
-          rel="noopener noreferrer">
-          GoGo React
-        </a>
-      </header>
-    </div>
+    <RootContainer>
+      <StyledPaper>
+        {isAuthenticated ? (
+          // If logged in, this page will be displayed
+          <div>
+            <Typography variant="h4" gutterBottom>
+              Welcome Back
+            </Typography>
+            <Typography variant="body1">
+              This is your personal page
+            </Typography>
+            {<img src={logo} className="App-logo" alt="logo" />}
+          </div>
+        ) : (
+          // If the user is not logged in, a login page prompt is displayed
+          <div>
+            <Typography variant="h4" gutterBottom>
+              Please login first
+            </Typography>
+            <Typography variant="body1">
+              To access this page, log in to your account.
+            </Typography>
+            <IconButton aria-label="login" color="primary" component={Link} to="/login">
+              <LoginIcon /> Login
+            </IconButton>
+          </div>
+        )}
+      </StyledPaper>
+    </RootContainer>
   );
 }
+
 export default Index;

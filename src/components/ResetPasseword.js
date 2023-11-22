@@ -21,6 +21,7 @@ function ResetPassword() {
         const errorCode = error.code;
         const errorMessage = error.message;
         // Error messages can be displayed here
+        console.log(errorCode, errorMessage)
       });
   }
 

@@ -4,6 +4,7 @@ import { Email, Lock } from '@mui/icons-material';
 import firebaseApp from '../firebase/firebase';  // Import Firebase
 import "firebase/compat/auth";
 import { useNavigate } from 'react-router-dom';
+import { setLoginStatusToFirebase } from './SessionService';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -13,19 +14,20 @@ function Login() {
   const handleLogin = () => {
     // Login with Firebase Authentication
     firebaseApp.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
+      .then(() => {
         // Login success
-        const user = userCredential.user;
+        setLoginStatusToFirebase(true);
         // Perform post-login actions, such as navigating to a user's profile page
-
         navigate('/login-success');
-
+        navigate(0)
       })
       .catch((error) => {
         // Handle login fail
         const errorCode = error.code;
         const errorMessage = error.message;
         // Error message alert
+        console.log(errorCode)
+        console.log(errorMessage)
       });
   }
 
@@ -63,7 +65,7 @@ function Login() {
         </Grid>
         <Grid item xs={12}>
           <Button variant="contained" color="primary" onClick={handleLogin}>
-          Login
+            Login
           </Button>
         </Grid>
       </Grid>
