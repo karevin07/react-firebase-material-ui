@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { TextField, Button, Container, Grid } from '@mui/material';
-import { Email, Lock } from '@mui/icons-material';
-import firebaseApp from '../firebase/firebase';  // Import Firebase
 import "firebase/compat/auth";
-import { useNavigate } from 'react-router-dom';
+
+import { Button, Container, Grid, TextField } from '@mui/material';
+import { Email, Lock } from '@mui/icons-material';
+import React, { useState } from 'react';
+
+import firebaseApp from '../firebase/firebase';
 import { setLoginStatusToFirebase } from './SessionService';
+import { useNavigate } from 'react-router-dom';
+
+// Import Firebase
 
 function Login() {
   const [email, setEmail] = useState('');

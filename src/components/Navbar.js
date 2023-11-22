@@ -1,7 +1,8 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
-import { Menu } from '@mui/icons-material';
+import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
+
 import { Link } from 'react-router-dom';
+import { Menu } from '@mui/icons-material';
+import React from 'react';
 
 function Navbar({ isAuthenticated }) {
   return (

@@ -1,8 +1,11 @@
+import { Button, Container, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import { TextField, Button, Container, Grid } from '@mui/material';
+
 import { Email } from '@mui/icons-material';
-import firebaseApp from '../firebase/firebase';  // Import Firebase
+import firebaseApp from '../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
+
+// Import Firebase
 
 function ResetPassword() {
   const [email, setEmail] = useState('');

@@ -1,13 +1,13 @@
-import logo from '../logo.svg';
 import '../App.css';
 
-import React from 'react';
-import { Typography, Paper } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
-import { IconButton } from '@mui/material';
-import LoginIcon from '@mui/icons-material/Login';
+import { Paper, Typography } from '@mui/material';
 
+import { IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
+import LoginIcon from '@mui/icons-material/Login';
+import React from 'react';
+import logo from '../logo.svg';
+import { styled } from '@mui/material/styles';
 
 const RootContainer = styled('div')({
   display: 'flex',

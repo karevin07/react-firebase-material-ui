@@ -1,18 +1,18 @@
 import './App.css';
 
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login'; 
+import React, { useEffect, useState } from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
+import Index from './components/Index';
+import Login from './components/Login';
 import LoginSuccess from './components/LoginSuccess';
 import Logout from './components/Logout';
 import Navbar from './components/Navbar';
 import Register from './components/Register';
 import RegisterSuccess from './components/RegisterSuccess';
-import ResetPassword from './components/ResetPasseword';
 import ResetPassewordSuccess from './components/ResetPassewordSuccess';
-import Index from './components/Index';
-import { getLoginStatusFromFirebase } from './components/SessionService'; 
-
+import ResetPassword from './components/ResetPasseword';
+import { getLoginStatusFromFirebase } from './components/SessionService';
 
 function App() {
 

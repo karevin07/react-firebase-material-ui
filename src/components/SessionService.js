@@ -1,16 +1,10 @@
-import firebaseApp from '../firebase/firebase'
 import "firebase/compat/database";
 import "firebase/compat/auth";
 
+import firebaseApp from '../firebase/firebase'
 
 // Initialize Realtime Database and get a reference to the service
 const database = firebaseApp.database();
-
-// Store user login status
-// export const setLoginStatusToFirebase = (userId, isAuthenticated) => {
-//   database.ref(`users/${userId}/isAuthenticated`).set(isAuthenticated);
-// };
-
 
 // Store user login status
 export const setLoginStatusToFirebase = (isAuthenticated) => {

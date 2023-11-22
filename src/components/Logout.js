@@ -1,10 +1,11 @@
-import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
+
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import firebaseApp from '../firebase/firebase'; // Import Firebase
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import firebaseApp from '../firebase/firebase'; // Import Firebase
 import { setLoginStatusToFirebase } from './SessionService';
+import { useNavigate } from 'react-router-dom';
 
 function Logout() {
   const navigate = useNavigate();

@@ -1,7 +1,8 @@
-import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
+
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 function RegisterSuccess() {
   return (
