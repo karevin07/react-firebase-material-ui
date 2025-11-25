@@ -1,15 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login'; 
+import './App.css';
+import Login from './components/Login';
 import LoginSuccess from './components/LoginSuccess';
 import Navbar from './components/Navbar';
 import Register from './components/Register';
 import RegisterSuccess from './components/RegisterSuccess';
-import ResetPassword from './components/ResetPasseword';
-import ResetPassewordSuccess from './components/ResetPassewordSuccess';
+import ResetPassword from './components/ResetPassword';
+import ResetPasswordSuccess from './components/ResetPasswordSuccess';
 import Index from './components/Index';
 function App() {
   return (
@@ -24,9 +22,9 @@ function App() {
           <Route path="/register" element={<Register />}/>
           <Route path="/reset-password" element={<ResetPassword />}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/login-success" element={<LoginSuccess />} /> 
-          <Route path="/register-success" element={<RegisterSuccess />} /> 
-          <Route path="/reset-password-success" element={<ResetPassewordSuccess />} /> 
+          <Route path="/login-success" element={<LoginSuccess />} />
+          <Route path="/register-success" element={<RegisterSuccess />} />
+          <Route path="/reset-password-success" element={<ResetPasswordSuccess />} />
         </Routes>
       </div>
     </Router>

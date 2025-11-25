@@ -25,12 +25,12 @@ function Navbar() {
         <Button component={Link} to="/register" color="inherit">
           Register
         </Button>
-        <Button component={Link} to="/reset-password" color="inherit">
-          ResetPasseord
-        </Button>
-      </Toolbar>
-    </AppBar>
-  );
-}
+          <Button component={Link} to="/reset-password" color="inherit">
+            Reset Password
+          </Button>
+        </Toolbar>
+      </AppBar>
+    );
+  }
 
 export default Navbar;
