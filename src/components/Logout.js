@@ -4,7 +4,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import firebaseApp from '../firebase/firebase'; // Import Firebase
-import { setLoginStatusToFirebase } from './SessionService';
 import { useNavigate } from 'react-router-dom';
 
 function Logout() {
@@ -13,8 +12,7 @@ function Logout() {
     // Logout with Firebase Authentication
     firebaseApp.auth().signOut().then(() => {
       // Logout success
-      setLoginStatusToFirebase(false);
-      navigate(0)
+      navigate('/')
     }).catch((error) => {
       // Logout fail
       console.error(error);

@@ -5,7 +5,6 @@ import { Email, Lock } from '@mui/icons-material';
 import React, { useState } from 'react';
 
 import firebaseApp from '../firebase/firebase';
-import { setLoginStatusToFirebase } from './SessionService';
 import { useNavigate } from 'react-router-dom';
 
 // Import Firebase
@@ -20,10 +19,8 @@ function Login() {
     firebaseApp.auth().signInWithEmailAndPassword(email, password)
       .then(() => {
         // Login success
-        setLoginStatusToFirebase(true);
         // Perform post-login actions, such as navigating to a user's profile page
         navigate('/login-success');
-        navigate(0)
       })
       .catch((error) => {
         // Handle login fail

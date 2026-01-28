@@ -38,7 +38,7 @@ function Navbar({ isAuthenticated }) {
               Register
             </Button>
             <Button component={Link} to="/reset-password" color="inherit">
-              ResetPasseord
+              Reset Password
             </Button>
           </div>
         )}
